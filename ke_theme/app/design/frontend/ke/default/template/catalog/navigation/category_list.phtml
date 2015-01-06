@@ -1,0 +1,50 @@
+<?php
+	$helper = Mage::helper('catalog/category');
+	$categories = $helper->getStoreCategories();
+?>
+
+<div class="category-list-grid">
+	<style>
+    @media (min-width: 800px){
+    .catname {opacity:0.6;}
+    .imagebox {width:33.33%;float: left;position: relative;}
+    a:hover + .catname {opacity:1;}
+    } 
+    @media (max-width: 800px){
+    .catname {opacity:0.6;}
+    .imagebox {width:50%;float: left;position: relative;}
+    a:hover + .catname {opacity:1;}
+    }
+    </style>
+
+	<?php
+    
+        $columns = 3 ;
+		$col = 12 / $columns;
+        $i = 1;
+		$count = $categories->count();
+        foreach($categories as $category) : 
+        if(!$category->getIsActive() && $children = $category->getChildren()) { continue; }
+		$_category = Mage::getModel('catalog/category')->load($category->getId());
+    ?>
+    
+        <div class="imagebox <?php echo $category->getUrl_key(); ?><?php echo ($_category->getImage() ? ' has-img' : ' hide'); ?>" style="margin-bottom:20px;">
+  
+			   <?php if($_category->getImage()) : ?>
+
+                    <a href="<?php echo $helper->getCategoryUrl($category); ?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'catalog/category/'.$_category->getImage(); ?>" alt="" class="category-thumbnail pull-left" style="max-width:300px;max-height:480px;width:100%;height:auto;"/></a>
+                    <div class="catname"><h3><a class="catnametag" href="<?php echo $helper->getCategoryUrl($category); ?>"><?php echo $category->getName(); ?></a></h3></div>
+               <?php endif; ?>
+               
+
+        </div>
+        
+	<?php if($i % $columns == 0 || $count == $i) : ?>
+    </div>
+    <?php if($i < $count) : ?>
+
+    <?php endif; ?>    
+    <?php endif; ?>     
+	<?php $i++; endforeach; ?>    
+    
+</div>

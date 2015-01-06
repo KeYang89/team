@@ -1,0 +1,63 @@
+#menu109 .parentMenu a span { border-right:0; }
+#custommenu {
+    position:relative;
+    z-index:1000;
+    font-size: 12px;
+    padding: 0;
+}
+div.menu {
+    float: left;
+}
+div.menu.act .parentMenu a {
+	color: #FFF;
+	font-weight: bold;
+}
+div.menu.active {}
+div.wp-custom-menu-popup {
+	font-size: 12px;
+    position:absolute;
+    z-index:3000;
+    display: none;
+    background-color:#333;
+    text-align:left;
+}
+div.wp-custom-menu-popup a { color: #FFF; }
+
+.parentMenu a { color: #fff; font-size: 14px; text-transform: uppercase; padding: 15px 0; }
+.parentMenu a span { display: block; padding:0; border-right: 1px solid #FFF; line-height:1; padding: 0 22px; }
+.parentMenu a:hover {}
+div.menu.active .parentMenu a span,
+.parentMenu a:hover span {
+	/*background: url('../../../images/bkg_top-menu-arrow.png') no-repeat 50% bottom;*/
+	position: relative;
+	z-index: 9999;	
+}
+
+div.menu.act .parentMenu a span {
+	/*background: url('../../../images/bkg_top-menu-arrow-dark.png') no-repeat 50% bottom;*/
+	position: relative;
+	z-index: 9999;
+}
+
+div.menu a, div.wp-custom-menu-popup a {
+    text-decoration: none;
+    display:block;
+}
+div.wp-custom-menu-popup a.actParent {
+    color: #fff;
+}
+div.wp-custom-menu-popup a.act {
+    color: #fff;
+}
+div.column {
+	border-right: 1px dotted #636363;
+    float:left;
+	margin: 20px 0;
+    padding:0 20px;
+}
+div.itemMenu a { font-weight: bold; text-transform: uppercase; }
+div.itemSubMenu a { font-weight: normal; margin: 2px 0; text-transform: none; }
+div.itemSubMenu a:hover { text-decoration: underline; }
+.clearBoth {
+    clear:both;
+}
