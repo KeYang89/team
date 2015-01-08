@@ -4274,7 +4274,11 @@ div.jqi .jqisubstate .jqibuttons button{
   
 }*/
 @media screen and (max-width: 768px) {
+#narrow-by-list {display:none;}
 .col-lg-5 {
+width: 100%;
+}
+.col-lg-9 {
 width: 100%;
 }
 .col-lg-3 {
@@ -4283,10 +4287,21 @@ width: 50%;
 }
 @media screen and (max-width: 400px) {
 #narrow-by-list {display:none;}
+.col-lg-9 {
+width: 100%;
+}
 .col-lg-5 {
 width: 100%;
+}
+.col-lg-4 {
+width:70%;
 }
 .col-lg-3 {
 width: 100%;
 }
+.pager .limiter {
+float: left;
+line-height: 1.8;
+}
+
 }
