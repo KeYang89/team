@@ -33,17 +33,73 @@
 ?>
 <?php $_menu = $this->getHtml('level-top') ?>
 <?php if($_menu): ?>
+<nav class="navbar navbar-default" role="navigation">
+<div class="navbar-collapse" id="petti-navbar-collapse">	
 <ul id="nav" class="nav navbar-nav">
 	<li class="level0 nav-1 first level-top parent"><a class="level-top" href="http://petticoat.linkedretaildemo.com/"><span id="homepage"><?php echo $this->__('HOME'); ?></span></a></li>
 	<li class="level0 nav-1 first level-top parent"><a class="level-top" href="http://petticoat.linkedretaildemo.com/features/team-members/"><span><?php echo $this->__('ABOUT US'); ?></span></a></li>
 	<li class="level0 nav-1 first level-top parent"><a class="level-top" href="http://petticoat.linkedretaildemo.com/fit-matters/" onmouseover="document.getElementById('yourvisit').style.display = 'block';" onmouseout="document.getElementById('yourvisit').style.display = 'none';" ><span><?php echo $this->__('FIT MATTERS'); ?></span></a>
- <ul class="level0"  id='yourvisit' onmouseover="document.getElementById('yourvisit').style.display = 'block';"  onmouseout="document.getElementById('yourvisit').style.display = 'none';" ><li class="level1 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/fit-matters/your-visit/"><span>YOUR VISIT</span></a></li>
-     </ul>
+				 <ul class="level0"  id='yourvisit' onmouseover="document.getElementById('yourvisit').style.display = 'block';"  onmouseout="document.getElementById('yourvisit').style.display = 'none';" ><li class="level1 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/fit-matters/your-visit/"><span>YOUR VISIT</span></a></li>
+				     </ul>
 	</li>
 
-	<li class="level0 nav-1 first level-top parent"><a class="level-top" href="http://petticoat.linkedretaildemo.com/gallery/our-products/" onmouseover="document.getElementById('bras').style.display = 'block';" onmouseout="document.getElementById('bras').style.display = 'none';"><span><?php echo $this->__('OUR PRODUCTS'); ?></span></a>
- <ul class="level0"  id='bras' onmouseover="document.getElementById('bras').style.display = 'block';"  onmouseout="document.getElementById('bras').style.display = 'none';" ><li class="level1 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/portfolio/bras/"><span>Bras</span></a></li><li class="level1 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/portfolio/specimen-book/"><span>Swimwear</span></a></li>
- </ul>
+	<li class="level0 nav-1 first level-top parent"><a class="level-top" href="http://petticoat.linkedretaildemo.com/gallery/our-products/" onmouseover="document.getElementById('products').style.display = 'block';" onmouseout="document.getElementById('products').style.display = 'none';"><span><?php echo $this->__('OUR PRODUCTS'); ?></span></a>
+			 <ul class="level0"  id='products' onmouseover="document.getElementById('products').style.display = 'block';"  onmouseout="document.getElementById('products').style.display = 'none';" >
+
+
+			 	<li class="level1 nav-3-1 first"  onmouseover="document.getElementById('bras').style.display = 'block';" onmouseout="document.getElementById('bras').style.display = 'none';"><a href="http://petticoat.linkedretaildemo.com/portfolio/bras/"><span>Bras</span></a>
+
+					 <ul class="level2"  id='bras' onmouseover="document.getElementById('bras').style.display = 'block';"  onmouseout="document.getElementById('bras').style.display = 'none';" >
+						<li class="level2 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/seamed/"><span>Seamed</span></a></li>
+
+					 	<li class="level2 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/seamless/"><span>Seamless</span></a></li>
+
+					 	<li class="level2 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/strapless/"><span>Strapless</span></a></li>
+
+					 	<li class="level2 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/molded/"><span>Molded</span></a></li>
+
+					 	<li class="level2 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/push-up-bras/"><span>Push-up Bras</span></a></li>
+
+					 	<li class="level2 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/non-wire-bras/"><span>Non-wire Bras</span></a></li>
+
+					 	<li class="level2 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/bustier/"><span>Bustiers</span></a></li>
+
+					 	<li class="level2 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/minimizer/"><span>Minimizer Bras</span></a></li>
+
+					 	<li class="level2 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/fashion-bras/"><span>Fashion Bras</span></a></li>
+
+					 	<li class="level2 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/nursing/"><span>Maternity & Nursing Bras</span></a></li>
+
+					 	<li class="level2 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/leisure/"><span>Leisure Bras</span></a></li>
+
+					 	<li class="level2 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/sports/"><span>Sports Bras</span></a></li>
+
+
+					 </ul>
+
+			 	</li>
+
+			 	<li class="level1 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/portfolio/shapewear/"><span>Shapewear</span></a></li>
+
+			 	<li class="level1 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/portfolio/bridal-formal/"><span>Bridal & Formal</span></a></li>
+
+			 	<li class="level1 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/portfolio/sleepwear/"><span>Sleepwear</span></a></li>
+
+			 	<li class="level1 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/portfolio/swimwear/"><span>Swimwear</span></a></li>
+
+			 	<li class="level1 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/portfolio/panties/"><span>Panties</span></a></li>
+
+			 	<li class="level1 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/portfolio/maternity-and-nursing/"><span>Maternity & Nursing</span></a></li>
+
+			 	<li class="level1 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/portfolio/petticoat/"><span>Petticoats</span></a></li>
+
+			 	<li class="level1 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/portfolio/accessories/"><span>Accesories</span></a></li>
+
+			 	<li class="level1 nav-3-1 first"><a href="http://petticoat.linkedretaildemo.com/portfolio/garment-care/"><span>Garment Care</span></a></li>
+			 
+
+
+			 </ul>
 	</li>
 	<li class="level0 nav-1 first level-top parent"><a class="level-top" href="http://petticoat.linkedretaildemo.com/features/faqs-page/"><span><?php echo $this->__('FAQS'); ?></span></a></li>
 	<li class="level0 nav-1 first level-top parent"><a class="level-top" href="http://petticoat.linkedretaildemo.com/testimonials/"><span><?php echo $this->__('TESTIMONIALS'); ?></span></a></li>
@@ -51,4 +107,6 @@
 	<li class="level0 nav-1 first level-top parent"><a class="level-top" href="http://petticoat.linkedretaildemo.com/shop/"><span><?php echo $this->__('SHOP'); ?></span></a></li>
     <?php //echo $_menu ?>
 </ul>
+</div>
+</nav>
 <?php endif ?>

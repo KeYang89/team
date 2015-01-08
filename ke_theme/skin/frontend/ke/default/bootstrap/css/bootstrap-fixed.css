@@ -2949,10 +2949,6 @@ border-bottom-color: transparent;
     width: auto;
   }
   .navbar-toggle {
-    position: relative;
-    top: auto;
-    left: auto;
-    display: none;
   }
   .nav-collapse.collapse {
     display: block !important;
