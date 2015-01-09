@@ -31,10 +31,13 @@
  * @see Mage_Page_Block_Html_Topmenu
  */
 ?>
+
+<link rel="stylesheet" href="http://petticoat.linkedretaildemo.com/shop/skin/frontend/ke/default/css/responsive-nav.css">
+<script src="http://petticoat.linkedretaildemo.com/shop/skin/frontend/ke/default/js/responsive-nav.js"></script>
 <?php $_menu = $this->getHtml('level-top') ?>
 <?php if($_menu): ?>
-<nav class="navbar navbar-default" role="navigation">
-<div class="navbar-collapse" id="petti-navbar-collapse">	
+
+<nav class="nav-collapse">	
 <ul id="nav" class="nav navbar-nav">
 	<li class="level0 nav-1 first level-top parent"><a class="level-top" href="http://petticoat.linkedretaildemo.com/"><span id="homepage"><?php echo $this->__('HOME'); ?></span></a></li>
 	<li class="level0 nav-1 first level-top parent"><a class="level-top" href="http://petticoat.linkedretaildemo.com/features/team-members/"><span><?php echo $this->__('ABOUT US'); ?></span></a></li>
@@ -107,6 +110,13 @@
 	<li class="level0 nav-1 first level-top parent"><a class="level-top" href="http://petticoat.linkedretaildemo.com/shop/"><span><?php echo $this->__('SHOP'); ?></span></a></li>
     <?php //echo $_menu ?>
 </ul>
-</div>
 </nav>
+
+<script>
+// var windowwidth=$(window).width(); 
+// if (windowwidth < 400)
+// {
+  var nav = responsiveNav(".nav-collapse");
+//}
+</script>
 <?php endif ?>

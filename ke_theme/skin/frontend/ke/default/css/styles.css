@@ -2494,15 +2494,15 @@ section#footerbanner ul#leftFooterBanner img{max-height:41px; max-width:45px;}
 	position: relative;max-width: 100%;background: white;margin-bottom: 18px;height: 40px;}
 
 .navbar {
-	background: url("http://petticoat.linkedretaildemo.com/wp-content/themes/WCM010005/images/line.jpg") repeat-x scroll center bottom transparent;
-	border-radius: 0;
-	font-family: 'Oswald', sans-serif;
-	font-size: 16px;
-	font-weight: 600;
-	margin: 0px auto;
-	padding: 0 15px 0 15px;
-	text-transform: capitalize;
-	width:1024px;
+background: url("http://petticoat.linkedretaildemo.com/wp-content/themes/WCM010005/images/line.jpg") repeat-x scroll center bottom transparent;
+border-radius: 0;
+font-family: 'Oswald', sans-serif;
+font-size: 16px;
+font-weight: 600;
+margin: -8px auto;
+padding: 0 15px 5px 15px;
+text-transform: capitalize;
+width: 1024px;
 }
 #nav > li:nth-child(8) > a > span{ border:none;}
 .navbar-nav > li > a {color: #74579A; padding: 20px 0;}
