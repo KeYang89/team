@@ -82,17 +82,17 @@ if(isset($_category))
             <input type="hidden" name="related_product" id="related-products-field" value="" />
         </div>
 
-        <div class="product-img-box col-lg-4">
+        <div class="product-img-box col-lg-7" style="margin-left:-30px;">
             <?php echo $this->getChildHtml('media') ?>
         </div>
 
-        <div class="col-lg-8">
+        <div class="col-lg-5">
 
         	<div class="product-shop">
 
                 <?php if ($_product->getData('in_store_only') != 1 && $_product->isSaleable() && $this->hasOptions() && $this->getChildChildHtml('container1', '', true, true)
 					   || $_product->getData('in_store_only') != 1 && $_product->isSaleable() && $this->hasOptions() && $this->getChildChildHtml('container2', '', true, true)) : ?>
-                <div class="product-options-right-col col-lg-5 pull-right">
+                <div class="product-options-right-col">
                         <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
                         <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
                 </div><!-- end .product-options-right-col -->
@@ -115,12 +115,21 @@ if(isset($_category))
                         </div>
                     <?php endif; ?>
                 </div>
-
+              </div>
+       </div>
+        <div class="col-lg-12">
                 <?php if ($_product->getShortDescription()):?>
                 <div class="short-description">
                     <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                 </div>
                 <?php endif;?>
+                <?php if ($_product->getDescription()):?>
+                <div class="description">
+                    <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getDescription()), 'description') ?></div>
+                </div>
+                <?php endif;?>
+
+
 
                 <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
                 <?php echo $this->getChildHtml('alert_urls') ?>
@@ -154,7 +163,7 @@ if(isset($_category))
                     <?php echo $this->getChildHtml('product_additional_data') ?>
                 </div>
             </div><!-- end .product-shop -->
-        </div>
+        
 
     </form>
     <script type="text/javascript">
@@ -201,5 +210,35 @@ if(isset($_category))
         }.bind(productAddToCartForm);
     //]]>
     </script>
+
+   
+ <div style="margin-top:10px;" class="col-lg-9"><h2 style="font-family:Oswald;color:#9d9d9d;font-size:22px;">YOU MAY ALSO LIKE</h2>
+                    <?php
+                    $upsell_product_collection = $_product->getUpSellProductCollection();
+                    $upsell_product_collection->AddStoreFilter();
+                    foreach($upsell_product_collection as $pdt)
+                    {
+                        $pdt_id=$pdt->getId();
+                        $model_rel = Mage::getModel('catalog/product'); //getting product model
+                        $_product_rel = $model_rel->load($pdt_id); //getting product object for particular product id
+                        $rel_name= $_product_rel->getName();
+                        $rel_price= number_format($_product_rel->getPrice(),2);
+
+                ?>
+                <div  style="float:left;width:160px;padding:5px;">
+
+                                    <a href='<?php echo $_product_rel->getProductUrl();?>'><img src="<?php echo Mage::getModel('catalog/product_media_config')
+                                                         ->getMediaUrl($_product_rel->getSmallImage()); ?>" 
+                                                width="150" height="150" alt="<?php echo $_product_rel->getName() ?>" />    
+
+                                            </a>
+<a href='<?php echo $_product_rel->getProductUrl();?>'><h2><?php echo $_product_rel->getName(); ?></h2></a>
+</div>
+
+                        <?php
+
+                        }
+                        ?>
+                    </div>
     </div>
 </div>

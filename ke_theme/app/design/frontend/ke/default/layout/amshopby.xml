@@ -13,7 +13,7 @@
         </reference>
 
         <reference name="left">
-           <block type="amshopby/catalog_layer_view" name="amshopby.navleft" before="-" template="catalog/layer/view.phtml"/> 
+           <block type="amshopby/catalog_layer_view" name="amshopby.navleft" after="-" template="catalog/layer/view.phtml"/> 
         </reference>
         <reference name="content">
             <block type="amshopby/catalog_layer_view_top" name="amshopby.navtop" template="amshopby/view_top.phtml"/>
@@ -36,7 +36,7 @@
         <remove name="catalog.leftnav" />
         <remove name="enterprisecatalog.leftnav"/> 
         <reference name="left">
-           <block type="amshopby/catalog_layer_view" name="amshopby.navleft" after="currency" template="catalog/layer/view.phtml"/> 
+           <block type="amshopby/catalog_layer_view" name="amshopby.navleft" after="-" template="catalog/layer/view.phtml"/> 
         </reference>
         <reference name="content">
                 <block type="amshopby/catalog_layer_view_top" name="amshopby.navtop" before="-" template="amshopby/view_top.phtml"/>
