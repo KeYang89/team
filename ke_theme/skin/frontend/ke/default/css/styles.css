@@ -94,7 +94,7 @@ ul,ol         { list-style:none; }
 
 .responsive-images img { display: inline-block; max-width: 100%; }
 
-.description > .std > ul > li {margin-top:-65px; }
+.description > .std > ul > li {margin-top:-35px; }
 .description > .std > ul {list-style-type:circle;}
 
 /*-----------------------------------------------------------------------------------*/
@@ -1283,7 +1283,7 @@ border-left-color: #ddd; border-width: 11px; top: 50%; margin-top: -11px; }
 .product-shop .add-to-cart button.btn-giftregistry span span { background: url('../images/i_btn_registry.png') no-repeat 13px 0; padding: 0 0 0 40px; }
 
 
-.product-shop .product-options-right-col { background: #f6f6f6; margin-bottom: 15px; margin-left: 15px; padding: 0 15px 15px; }
+.product-shop .product-options-right-col { background: #f6f6f6; margin-bottom: 15px; padding: 0 15px 15px; }
 .product-shop .product-options-right-col .product-options,
 .product-shop .product-options-right-col .product-options dl.last dd.last { padding: 0; }
 .product-shop .product-options-right-col .product-options-bottom { border: 0; padding: 0; }
@@ -2105,7 +2105,7 @@ ul.article_list li:after,
 -------------------------------------------------------------- */
 body {
 	background:white;
-	color: #000;
+	color: #3d3d3d;
 	font-family: 'Oswald', sans-serif;
 	font-size: 13px;
 	line-height: 1.5;
